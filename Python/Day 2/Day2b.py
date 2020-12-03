@@ -8,8 +8,7 @@ for entry in content:
     pos, letter, password = out[0], out[1], out[2]
 
     #get limits
-    splitpos = pos.split('-')
-    first, last = list(map(int, splitpos))
+    first, last = list(map(int, pos.split('-')))
 
     #get letter
     letter = letter.strip(':')
