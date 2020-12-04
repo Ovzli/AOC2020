@@ -17,10 +17,6 @@ def CheckValidity(passport):
             or (bool((re.search(r"hgt:\d{2}in\b", entry))) and (59 <= int(re.sub('[^0-9]',"",entry)) <= 76))
             or (bool(re.search(r"cid",entry)))
             )
-        print(entry)
-        print(valid)
-    print(valid)
-    print ("----------------")
     return valid
 
 
