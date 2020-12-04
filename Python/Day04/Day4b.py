@@ -5,7 +5,7 @@ def CheckValidity(passport):
     valid = all(x in passport for x in reqFields)
     if (not valid):
         return valid
-    for entry in passport.split(" "): # What have I done
+    for entry in re.split(r" |\n",passport): # What have I done
         valid = valid and (
             (bool(re.search(r"byr:\d{4}\b", entry)) and ((1920 <= int(re.sub('[^0-9]',"",entry))) and (int(re.sub('[^0-9]',"",entry)) <= 2002)))
             or (bool((re.search(r"iyr:\d{4}\b", entry))) and (2010 <= int(re.sub('[^0-9]',"",entry)) <= 2020))
