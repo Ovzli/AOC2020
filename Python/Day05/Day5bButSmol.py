@@ -1,0 +1,2 @@
+seatIDs = [(int(boardingPass[:7].translate({ord(x): y for (x, y) in zip("BF","10")}), 2) * 8 + int(boardingPass[7:].translate({ord(x): y for (x, y) in zip("RL","10")}), 2)) for boardingPass in open('input.txt', 'r').read().splitlines()]
+input(list(set(range(min(seatIDs)+1,max(seatIDs)+1))-set(seatIDs))) # set objects are very cool
