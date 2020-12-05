@@ -11,5 +11,5 @@ content = open('input.txt', 'r').read().splitlines()
 seatIDs = []
 for boardingPass in content:
    seatIDs.append(GetSeatID(boardingPass))
-print(max(seatIDs))
+print(list(set(range(min(seatIDs)+1,max(seatIDs)+1))-set(seatIDs))) # set objects are very cool
 input("finished")
