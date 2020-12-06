@@ -1,0 +1,1 @@
+input(sum([len(set.intersection(*[set(list(person)) for person in group.splitlines()])) for group in open('input.txt', 'r').read().split("\n\n")])) # 1-line != better, this is just an exercise to see if I could (and I could)
